@@ -1,0 +1,1 @@
+alter table locations add column if not exists region_id  int ;

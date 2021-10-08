@@ -1,0 +1,6 @@
+2021-10-07 18:45:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "COUTRY" not found; SQL statement:
+alter table coutry rename to countrys [42102-197]
+2021-10-07 18:46:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "COUTRYS" not found; SQL statement:
+alter table coutrys rename to countries [42102-197]
