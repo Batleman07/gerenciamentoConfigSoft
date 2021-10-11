@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.4.xsd ">
+
+    <changeSet id="1" author="Alessandro">
+        <createTable  tableName="countrys">  
+            <column name="country_id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column name="coutry_name"  type="varchar(50)"/>  
+            <column name="region_id"  type="int">  
+                <constraints  nullable="false"/>  
+            </column>              
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="Alessandro">
+        <createTable  tableName="jobs">  
+            <column name="job_id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column name="job_title"  type="varchar(50)"/>  
+            <column name="min_salary"  type="DECIMAL(10, 2)"/>
+            <column name="max_salary"  type="DECIMAL(10, 2)">   
+                <constraints  nullable="false"/>  
+            </column>              
+        </createTable>
+    </changeSet>
+    <changeSet id="3" author="Alessandro">
+        <createTable  tableName="job_history">  
+            <column name="employee_id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column name="start_date"  type="date"/> 
+            <column name="end_date"  type="date"/>  
+            <column name="job_id"  type="int"/> 
+            <column name="department_id"  type="int">                
+                <constraints  nullable="false"/>  
+            </column>              
+        </createTable>
+    </changeSet>      
+    <changeSet  id="4" author="Alessandro" >  
+        <renameTable
+            newTableName="countries"  
+            oldTableName="countrys"  
+        />
+    </changeSet>
+    
+    <changeSet id="5" author="Alessandro">
+        <createTable  tableName="locations">  
+            <column name="street"  type="varchar(50)">  
+                <constraints    nullable="false"/>  
+            </column>  
+            <column name="city"  type="varchar(50)"/>  
+            <column name="state"  type="varchar(50)"/>
+            <column name="country_id"  type="int">  
+                <constraints  nullable="false"/>  
+            </column>              
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="6"  author="Alessandro">  
+        <addColumn  tableName="locations">  
+            <column  name="region_id"  type="int" autoIncrement="true">
+            <constraints   nullable="false"/>
+            </column>
+        </addColumn>          
+    </changeSet>
+    <!---
+    <changeSet  author="Alessandro"  id="7">  
+        <dropColumn  
+                columnName="city"                   
+                tableName="locations">             
+              
+        </dropColumn>  
+    </changeSet>
+    -->
+    
+
+
+
+  
+</databaseChangeLog>
