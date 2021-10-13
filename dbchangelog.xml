@@ -47,8 +47,21 @@
         <renameTable
             newTableName="countries"  
             oldTableName="countrys"  
-        />
-    </changeSet>
+        /> 
+        <rollback>
+            <dropTable                  
+                tableName="locations"/>           
+        </rollback>       
+    </changeSet>   
+    
+       
+            
+            
+        
+    
+
+
+    
     
     <changeSet id="5" author="Alessandro">
         <createTable  tableName="locations">  
@@ -77,7 +90,9 @@
                 tableName="locations">             
               
         </dropColumn>  
-    </changeSet>
+        <rollback>            
+        </rollback>
+    </changeSet>       
     -->
     
 

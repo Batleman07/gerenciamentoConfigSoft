@@ -7,4 +7,5 @@ Alunos: {Alessandro Marques}@univille.br
 
 ###                Versionamento de Schema Liquibase
 -----------------------------------------------------------------------------
+####                    Trabalho finalizado
 <img src="comp.gif" alt="Progrmando pra caraio." width="50%" height="50%"/>
