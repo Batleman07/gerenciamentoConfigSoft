@@ -1,10 +1,10 @@
-# TRABALHO GCSOFT_ B4 -Divida técnica - Trabalho - 10/11/2021
+# TRABALHO GCSOFT_ B4 -Sqale - Trabalho - 10/11/2021
 -----------------------------------------------------------------------------
 ##                         DOSCENTE: GLÁUCIO
 -----------------------------------------------------------------------------
 Alunos: {Alessandro Marques}
 -----------------------------------------------------------------------------
 
-###                Dívida técnica
+###                Analise sonarCloud
 -----------------------------------------------------------------------------
 <img src="comp.gif" alt="Progrmando pra caraio." width="50%" height="50%"/>
